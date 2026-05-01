@@ -1,27 +1,28 @@
-## Parent image
+# Parent image
 FROM python:3.10-slim
 
-## Essential environment variables
+# Environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app  
 
-## Work directory inside the docker container
+# Working directory
 WORKDIR /app
 
-## Installing system dependancies
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-## Copying ur all contents from local to app
+# Copy project files
 COPY . .
 
-## Run setup.py
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Used PORTS
+# Expose Streamlit port
 EXPOSE 8501
 
-# Run the app 
-CMD ["streamlit", "run", "app/app.py", "--server.port=8501", "--server.address=0.0.0.0","--server.headless=true"]
+# Run Streamlit app
+CMD ["streamlit", "run", "app/app.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true"]
