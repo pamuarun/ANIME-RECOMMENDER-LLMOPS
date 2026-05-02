@@ -1,4 +1,4 @@
-# AI Anime Recommender (LLMOps)
+# 🌸 AI Anime Recommender (LLMOps) 🎌
 
 Welcome to the **AI Anime Recommender** project! This is an end-to-end LLMOps project that provides personalized anime recommendations using large language models, deployed on a robust Kubernetes cluster with real-time monitoring.
 
@@ -10,27 +10,37 @@ Welcome to the **AI Anime Recommender** project! This is an end-to-end LLMOps pr
 > 5. Build and Deploy your APP on VM
 > 6. GRAFANA CLOUD MONITORING
 
-## 🚀 Features
+## 🏗️ Architecture
 
-- **AI-Powered Recommendations:** Utilizes LangChain, Groq, and HuggingFace for intelligent anime suggestions.
-- **Vector Database:** Integrates ChromaDB for efficient similarity search and context retrieval.
-- **Interactive UI:** Built with Streamlit for a seamless user experience.
-- **Containerized:** Fully Dockerized application for consistent deployments.
-- **Kubernetes Orchestration:** Managed using Kubernetes (Minikube) for scalability.
-- **Cloud Deployment:** Hosted on Google Cloud Platform (GCP) VM instances.
-- **Observability:** Real-time monitoring with Grafana Cloud and Helm charts.
+![AI Anime Recommender Workflow](Architecture/AI+Anime+Recommender+Workflow.png)
+
+## 📊 Dataset
+
+The system relies on a rich dataset located in the `data/` directory, containing comprehensive anime metadata:
+- 📁 `data/anime_updated.csv`
+- 📁 `data/anime_with_synopsis.csv`
+
+## ✨ Features
+
+- 🧠 **AI-Powered Recommendations:** Utilizes LangChain, Groq, and HuggingFace for intelligent, context-aware anime suggestions.
+- 🗄️ **Vector Database:** Integrates ChromaDB for blazingly fast similarity search and efficient context retrieval.
+- 💻 **Interactive UI:** Built with Streamlit for a sleek, responsive, and seamless user experience.
+- 🐳 **Containerized:** Fully Dockerized application ensuring consistent and reliable deployments anywhere.
+- ☸️ **Kubernetes Orchestration:** Managed using Kubernetes (Minikube) for robust scaling and orchestration.
+- ☁️ **Cloud Deployment:** Hosted seamlessly on Google Cloud Platform (GCP) VM instances.
+- 📈 **Observability:** Real-time metrics and monitoring powered by Grafana Cloud and Helm charts.
 
 ## 🛠️ Technology Stack
 
-- **Language:** Python 3.14
-- **Framework:** Streamlit
-- **LLM Orchestration:** LangChain
-- **Models & Embeddings:** Groq API, HuggingFace, Sentence Transformers
-- **Vector Database:** ChromaDB
-- **Containerization:** Docker
-- **Orchestration:** Kubernetes (K8s), Minikube
-- **Monitoring:** Grafana Cloud, Helm
-- **Cloud Provider:** Google Cloud Platform (GCP)
+- 🐍 **Language:** Python 3.14
+- 🎨 **Framework:** Streamlit
+- 🦜 **LLM Orchestration:** LangChain
+- 🤖 **Models & Embeddings:** Groq API, HuggingFace, Sentence Transformers
+- 🗃️ **Vector Database:** ChromaDB
+- 📦 **Containerization:** Docker
+- ⚓ **Orchestration:** Kubernetes (K8s), Minikube
+- 👁️ **Monitoring:** Grafana Cloud, Helm
+- ☁️ **Cloud Provider:** Google Cloud Platform (GCP)
 
 ## 📁 Project Structure
 
@@ -40,6 +50,7 @@ Welcome to the **AI Anime Recommender** project! This is an end-to-end LLMOps pr
 ├── Architecture/         # Project architecture diagrams and design docs
 ├── chroma_db/            # Local vector database storage
 ├── config/               # Configuration settings and environment variables
+├── data/                 # Raw dataset files (CSV)
 ├── Outputs/              # Generated outputs and logs
 ├── pipeline/             # Data ingestion and processing pipelines
 ├── src/                  # Core source code and business logic
