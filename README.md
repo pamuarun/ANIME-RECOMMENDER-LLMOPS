@@ -144,8 +144,4 @@ To enable observability for the Kubernetes cluster:
 3. Deploy the Grafana Kubernetes Monitoring Helm chart using your custom `values.yaml` as described in `FULL_DOCUMENTATION.md`.
 4. View metrics in real-time on your Grafana dashboard.
 
-## 🤝 Contributing
-Contributions are welcome! Please fork this repository and submit a pull request with your enhancements.
 
-## 📝 License
-This project is licensed under the MIT License.
